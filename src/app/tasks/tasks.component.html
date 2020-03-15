@@ -1,0 +1,10 @@
+<div class="task-container">
+  <label> <input type="checkbox" (click)="crossOutTask()"> </label>
+  <p
+    [ngClass]="{
+      'crossed-out': toggleCrossOut
+    }"
+    [class.active]="!toggleCrossOut"
+  >{{ task.text }}</p>
+  <button (click)="deleteNewTask()">Delete</button>
+</div>

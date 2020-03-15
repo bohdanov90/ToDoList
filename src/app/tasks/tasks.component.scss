@@ -1,0 +1,33 @@
+.task-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border: 1px solid black;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+  input {
+    width: 5%;
+    margin: 1%;
+  }
+
+  p {
+    width: 80%;
+    //border: 1px solid black;
+    margin: 1%;
+    font-size: 22px;
+  }
+
+  button {
+    width: 15%;
+  }
+
+  .crossed-out {
+    text-decoration: line-through;
+  }
+
+  .active {
+    text-decoration: none;
+  }

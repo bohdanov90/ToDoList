@@ -1,0 +1,10 @@
+<div class="adding-new-task-container">
+  <label>
+    <input
+      type="text"
+      placeholder="Add new task here..."
+      [(ngModel)]="taskText"
+    >
+  </label>
+  <button (click)="createNewTask()">Add a task</button>
+</div>
