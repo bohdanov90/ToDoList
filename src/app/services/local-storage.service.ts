@@ -10,9 +10,7 @@ export class LocalStorageService {
 
   public localStorageArray = [];
 
-  constructor() {
-    console.log(this.localStorageArray);
-  }
+  constructor() {}
 
   updateLocalStorage() {
     localStorage.setItem(storageName, JSON.stringify(this.localStorageArray));
