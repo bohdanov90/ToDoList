@@ -4,6 +4,7 @@
       type="text"
       placeholder="Add new task here..."
       [(ngModel)]="taskText"
+      (keyup.enter)="createNewTask()"
     >
   </label>
   <button (click)="createNewTask()">Add a task</button>

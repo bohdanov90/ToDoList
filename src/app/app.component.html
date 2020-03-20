@@ -1,5 +1,7 @@
-<div class="container">
-  <h1> My Tasks </h1>
-  <app-adding-new-task (createTask)="onCreateTasks($event)"></app-adding-new-task>
-  <app-tasks *ngFor="let t of tasks" [task]="t" (deleteTask)="onDeleteTasks($event)"></app-tasks>
+<div class="wrapper">
+  <div class="container">
+    <h1> My Tasks </h1>
+    <app-adding-new-task (createTask)="onCreateTasks($event)"></app-adding-new-task>
+    <app-tasks *ngFor="let t of tasks" [task]="t" (deleteTask)="onDeleteTasks($event)"></app-tasks>
+  </div>
 </div>

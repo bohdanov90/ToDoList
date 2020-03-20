@@ -5,6 +5,8 @@
       'crossed-out': toggleCrossOut
     }"
     [class.active]="!toggleCrossOut"
-  >{{ task.text }}</p>
+  >
+    {{ task.text }}
+  </p>
   <button (click)="deleteNewTask()">Delete</button>
 </div>
