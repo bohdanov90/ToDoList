@@ -15,7 +15,7 @@ export interface Task {
 export class AppComponent implements OnInit {
 
   title = 'to-do-list';
-  tasks;
+  tasks: Task[];
 
   constructor(
     private toDoListService: ToDoListService
@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
     this.tasks = this.toDoListService.getTask();
   }
 
-  onCreateTasks(task) {
+  onCreateTasks(task: Task) {
     this.tasks = this.toDoListService.createTask(task);
 }
 
