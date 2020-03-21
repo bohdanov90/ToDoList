@@ -8,9 +8,11 @@ import { LocalStorageService } from './local-storage.service';
 
 export class ToDoListService {
 
+  public toggleCrossOut = false;
+
   constructor(
     public localStorageService: LocalStorageService,
-  ) { }
+  ) {}
 
   getTask() {
     return this.localStorageService.getItem();

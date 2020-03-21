@@ -4,6 +4,7 @@ import { ToDoListService } from './services/to-do-list.service';
 export interface Task {
   id: number;
   text: string;
+  class?: string;
 }
 
 @Component({

@@ -1,12 +1,13 @@
-<div class="task-container">
+<div class="tasks-container">
   <label> <input type="checkbox" (click)="crossOutTask()"> </label>
   <p
     [ngClass]="{
-      'crossed-out': toggleCrossOut
+      'active' : !toggle,
+      'crossed-out': toggle
     }"
-    [class.active]="!toggleCrossOut"
   >
     {{ task.text }}
   </p>
   <button (click)="deleteNewTask()">Delete</button>
 </div>
+

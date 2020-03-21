@@ -25,7 +25,7 @@ export class LocalStorageService {
   }
 
   createItem(item: Task) {
-    localStorageArray = [...localStorageArray, item];
+    localStorageArray = [item, ...localStorageArray];
     return this.updateLocalStorage();
   }
 

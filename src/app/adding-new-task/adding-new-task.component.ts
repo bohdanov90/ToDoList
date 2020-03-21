@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {Task} from '../app.component';
 
 @Component({
@@ -7,15 +7,11 @@ import {Task} from '../app.component';
   styleUrls: ['./adding-new-task.component.scss']
 })
 
-export class AddingNewTaskComponent implements OnInit {
+export class AddingNewTaskComponent {
 
   @Output() createTask: EventEmitter<Task> = new EventEmitter<Task>();
 
   taskText = '';
-
-  constructor() { }
-
-  ngOnInit(): void {}
 
   createNewConst() {
     const newTask: Task = {

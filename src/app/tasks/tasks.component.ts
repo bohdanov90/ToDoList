@@ -1,5 +1,6 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Task} from '../app.component';
+import { ToDoListService } from '../services/to-do-list.service';
 
 @Component({
   selector: 'app-tasks',
@@ -7,23 +8,21 @@ import {Task} from '../app.component';
   styleUrls: ['./tasks.component.scss']
 })
 
-export class TasksComponent implements OnInit {
+export class TasksComponent {
 
   @Input() task: Task;
   @Output() deleteTask: EventEmitter<number> = new EventEmitter<number>();
 
-  toggleCrossOut = false;
+  toggle: boolean = this.toDoListService.toggleCrossOut;
 
-  constructor() { }
-
-  ngOnInit(): void {}
+  constructor(public toDoListService: ToDoListService) {}
 
   deleteNewTask() {
     this.deleteTask.emit(this.task.id);
   }
 
   crossOutTask() {
-    this.toggleCrossOut = !this.toggleCrossOut;
+    this.toggle = !this.toggle;
   }
 
 }
