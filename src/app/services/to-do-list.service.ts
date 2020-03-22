@@ -15,15 +15,17 @@ export class ToDoListService {
   ) {}
 
   getTask() {
-    return this.localStorageService.getItem();
+    return this.localStorageService.getLocalStorage();
   }
 
   createTask(task: Task) {
-    return this.localStorageService.createItem(task);
+    this.localStorageService.localStorageArray = [task, ...this.localStorageService.localStorageArray];
+    return this.localStorageService.setLocalStorage();
   }
 
   deleteTask(id: number) {
-    return this.localStorageService.deleteItem(id);
+    this.localStorageService.localStorageArray = this.localStorageService.localStorageArray.filter(el => el.id !== id);
+    return this.localStorageService.setLocalStorage();
   }
 
 }

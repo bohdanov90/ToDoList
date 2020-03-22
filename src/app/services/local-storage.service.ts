@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import {Task} from '../app.component';
+import { Task } from '../app.component';
 
-const storageName = 'to-do-list';
-let localStorageArray: Task[] = [];
+const localStorageName = 'to-do-list';
 
 @Injectable({
   providedIn: 'root'
@@ -10,28 +9,20 @@ let localStorageArray: Task[] = [];
 
 export class LocalStorageService {
 
+  public localStorageArray: Task[] = [];
+
   constructor() {
-    localStorageArray = this.getItem();
+    this.localStorageArray = this.getLocalStorage();
   }
 
-  updateLocalStorage() {
-    localStorage.setItem(storageName, JSON.stringify(localStorageArray));
-    return localStorageArray;
-  }
-
-  getItem() {
-    const value = localStorage.getItem(storageName);
+  getLocalStorage() {
+    const value = localStorage.getItem(localStorageName);
     return !!value ? JSON.parse(value) : [];
   }
 
-  createItem(item: Task) {
-    localStorageArray = [item, ...localStorageArray];
-    return this.updateLocalStorage();
-  }
-
-  deleteItem(id: number) {
-    localStorageArray = localStorageArray.filter(el => el.id !== id);
-    return this.updateLocalStorage();
+  setLocalStorage() {
+    localStorage.setItem(localStorageName, JSON.stringify(this.localStorageArray));
+    return this.localStorageArray;
   }
 
 }
