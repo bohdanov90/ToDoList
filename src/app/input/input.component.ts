@@ -2,12 +2,12 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { Task } from '../interfaces/task';
 
 @Component({
-  selector: 'app-adding-new-task',
-  templateUrl: './adding-new-task.component.html',
-  styleUrls: ['./adding-new-task.component.scss']
+  selector: 'app-input',
+  templateUrl: './input.component.html',
+  styleUrls: ['./input.component.scss']
 })
 
-export class AddingNewTaskComponent {
+export class InputComponent {
 
   @Output() createTask: EventEmitter<Task> = new EventEmitter<Task>();
 

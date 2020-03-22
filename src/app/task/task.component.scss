@@ -1,0 +1,48 @@
+.tasks-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 2vh;
+  padding: 1vh;
+  height: 15vh;
+  background-color: lightgrey;
+}
+
+label {
+  width: 15%;
+  height: 100%;
+  padding: 0.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  width: 65%;
+  height: 100%;
+  padding: 0.5vw;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+button {
+  width: 25%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.crossed-out {
+  text-decoration: line-through;
+}
+
+.active {
+  text-decoration: none;
+}

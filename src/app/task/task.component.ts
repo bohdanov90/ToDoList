@@ -1,14 +1,14 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Task } from '../interfaces/task';
 import { ToDoListService } from '../services/to-do-list.service';
 
 @Component({
-  selector: 'app-tasks',
-  templateUrl: './tasks.component.html',
-  styleUrls: ['./tasks.component.scss']
+  selector: 'app-task',
+  templateUrl: './task.component.html',
+  styleUrls: ['./task.component.scss']
 })
 
-export class TasksComponent {
+export class TaskComponent {
 
   @Input() task: Task;
   @Output() deleteTask: EventEmitter<number> = new EventEmitter<number>();
