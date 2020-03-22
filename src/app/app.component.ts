@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToDoListService } from './services/to-do-list.service';
-
-export interface Task {
-  id: number;
-  text: string;
-  class?: string;
-}
+import { Task } from './interfaces/task';
 
 @Component({
   selector: 'app-root',

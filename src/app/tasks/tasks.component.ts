@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Task} from '../app.component';
+import { Task } from '../interfaces/task';
 import { ToDoListService } from '../services/to-do-list.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class TasksComponent {
   @Input() task: Task;
   @Output() deleteTask: EventEmitter<number> = new EventEmitter<number>();
 
-  toggle: boolean = this.toDoListService.toggleCrossOut;
+  public toggle: boolean = this.toDoListService.toggleCrossOut;
 
   constructor(public toDoListService: ToDoListService) {}
 

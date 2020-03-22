@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Task } from '../app.component';
+import { Task } from '../interfaces/task';
 
 const localStorageName = 'to-do-list';
 
