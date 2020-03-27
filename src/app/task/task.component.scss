@@ -1,69 +1,61 @@
-.tasks-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container {
   width: 100%;
-  margin-bottom: 2vh;
   height: 15vh;
+  margin-bottom: 2vh;
   box-sizing: border-box;
-}
-
-//label {
-//  width: 15%;
-//  height: 100%;
-//  padding: 0.5vw;
-//  display: flex;
-//  justify-content: center;
-//  align-items: center;
-//}
-
-p {
-  width: 90%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  font-size: 2rem;
-  background-color: #00adb5;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding-left: 1vw;
-}
-
-.btn {
-  width: 10%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-button {
-  width: 100%;
-  height: 100%;
-  border: 1px solid black;
-  border-radius: 10px;
-  background-color: #ff5151;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  p {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    background-color: #00adb5;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 1vw;
+    margin-right: 0.5vw;
+  }
 
-button > span {
-  padding-left: 0.5vw;
-}
+  .btn {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-button:hover {
-  background-color: #e81a1a;
-}
+    button {
+      width: 100%;
+      height: 100%;
+      border: 1px solid black;
+      border-radius: 10px;
+      background-color: #ff5151;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-button:active {
-  transform:translateY(2px);
-}
+    button:hover {
+      background-color: #e81a1a;
+    }
+
+    button:active {
+      transform:translateY(2px);
+    }
+
+      button > span {
+        padding-left: 0.5vw;
+      }
 
 .crossed-out {
   text-decoration: line-through;
-  background-color: #e81a1a;
+  background-color: #56b84d;
 }
 
 .active {
@@ -73,6 +65,8 @@ button:active {
 @media screen and (max-width: 1200px) {
   p {
     width: 85%;
+    margin-right: 1vw;
+    padding-left: 2vw;
   }
 
   .btn {
@@ -81,29 +75,27 @@ button:active {
 }
 
 @media screen and (max-width: 768px) {
-  button {
-    width: 100%;
-  }
-
-  button > span {
-    display: none;
-  }
-
   p {
     font-size: 1.25rem;
     width: 90%;
+    margin-right: 1vw;
+    padding-left: 3vw;
   }
 
   .btn {
     width: 10%;
   }
+
+    button {
+      width: 100%;
+    }
+
+      button > span {
+        display: none;
+      }
 }
 
 @media screen and (max-width: 480px) {
-  button {
-    width: 100%;
-  }
-
   p {
     font-size: 1rem;
     width: 85%;
@@ -112,6 +104,10 @@ button:active {
   .btn {
     width: 15%;
   }
+
+    button {
+      width: 100%;
+    }
 }
 
 // for non-touch screen devices (to eliminate hover effects trails)

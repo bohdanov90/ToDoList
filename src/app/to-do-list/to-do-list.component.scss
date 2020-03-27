@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+
 .wrapper {
   display: flex;
   justify-content: center;
-  background-color: #393e46;
+  background: rgb(88,84,84);
+  background: linear-gradient(90deg, rgba(88,84,84,1) 0%, rgba(113,71,71,1) 47%, rgba(26,92,105,1) 100%);
+  font-family: 'Sen', sans-serif;
   font-size: 18px;
 }
 
