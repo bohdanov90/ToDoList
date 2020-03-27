@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { LocalStorageService } from './services/local-storage.service';
 import { ToDoListService } from './services/to-do-list.service';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ToDoListComponent } from './to-do-list/to-do-list.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [
     LocalStorageService,
