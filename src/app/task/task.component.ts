@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Task } from '../interfaces/task';
-import { ToDoListService } from '../services/to-do-list.service';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -10,21 +9,17 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 })
 
 export class TaskComponent {
-
   @Input() task: Task;
   @Output() deleteTask: EventEmitter<number> = new EventEmitter<number>();
 
-  public toggle: boolean = this.toDoListService.toggleCrossOut;
+  public toggleCrossOut = false;
   public trashIcon = faTrash;
 
-  constructor(public toDoListService: ToDoListService) {}
-
-  deleteNewTask() {
+  deleteNewTask(): void {
     this.deleteTask.emit(this.task.id);
   }
 
-  crossOutTask() {
-    this.toggle = !this.toggle;
+  crossOutTask(): void {
+    this.toggleCrossOut = !this.toggleCrossOut;
   }
-
 }

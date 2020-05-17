@@ -1,12 +1,12 @@
 <div class="container">
   <p
     [ngClass]="{
-      'active' : !toggle,
-      'crossed-out': toggle
+      'active' : !toggleCrossOut,
+      'crossed-out': toggleCrossOut
     }"
     (click)="crossOutTask()"
   >
-    {{ task.text }}
+    {{task.text}}
   </p>
   <div class="btn">
     <button (click)="deleteNewTask()">

@@ -8,25 +8,20 @@ import { Task } from '../interfaces/task';
 })
 
 export class InputComponent {
-
   @Output() createTask: EventEmitter<Task> = new EventEmitter<Task>();
 
-  taskText = '';
+  public newTask: Task;
+  public taskText = '';
 
-  createNewConst() {
-    const newTask: Task = {
-      id: Date.now(),
-      text: this.taskText,
-    };
-    return newTask;
-  }
-
-  createNewTask() {
+  createNewTask(): void {
     if (this.taskText.trim().length > 0) {
-      this.createNewConst();
-      this.createTask.emit(this.createNewConst());
+      this.createTask.emit(
+        this.newTask = {
+          id: Date.now(),
+          text: this.taskText,
+        }
+      );
       this.taskText = '';
     }
   }
-
 }

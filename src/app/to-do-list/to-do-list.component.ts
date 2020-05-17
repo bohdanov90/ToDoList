@@ -8,7 +8,6 @@ import { Task } from '../interfaces/task';
   styleUrls: ['./to-do-list.component.scss']
 })
 export class ToDoListComponent implements OnInit {
-
   tasks: Task[];
 
   constructor(
@@ -19,16 +18,15 @@ export class ToDoListComponent implements OnInit {
     this.getTasks();
   }
 
-  getTasks() {
+  getTasks(): void {
     this.tasks = this.toDoListService.getTask();
   }
 
-  onCreateTasks(task: Task) {
+  onCreateTasks(task: Task): void {
     this.tasks = this.toDoListService.createTask(task);
   }
 
-  onDeleteTasks(id: number) {
+  onDeleteTasks(id: number): void {
     this.tasks = this.toDoListService.deleteTask(id);
   }
-
 }

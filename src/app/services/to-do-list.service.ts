@@ -7,25 +7,21 @@ import { LocalStorageService } from './local-storage.service';
 })
 
 export class ToDoListService {
-
-  public toggleCrossOut = false;
-
   constructor(
     public localStorageService: LocalStorageService,
   ) {}
 
-  getTask() {
+  getTask(): Task[] {
     return this.localStorageService.getLocalStorage();
   }
 
-  createTask(task: Task) {
+  createTask(task: Task): Task[] {
     this.localStorageService.localStorageArray = [task, ...this.localStorageService.localStorageArray];
     return this.localStorageService.setLocalStorage();
   }
 
-  deleteTask(id: number) {
+  deleteTask(id: number): Task[] {
     this.localStorageService.localStorageArray = this.localStorageService.localStorageArray.filter(el => el.id !== id);
     return this.localStorageService.setLocalStorage();
   }
-
 }
